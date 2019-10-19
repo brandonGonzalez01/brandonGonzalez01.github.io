@@ -1,5 +1,5 @@
 #content{
-    margin: 0 sauto;
+    margin: 0 auto;
 }
 
 #header-row{
@@ -14,22 +14,36 @@
     font-size: 1em;
 }
 
+#subheader{
+    font-size: 1.5em;
+}
+
 #resume{
     display:none;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #interests{
     display:none;
-
+    margin-top: 5px ;
 }
 #projects{
     display:none;
-
+    margin-top: 5px ;
 }
-
+.keywords{
+    font-size: .75em;
+    font-family: monospace;
+    margin-top: 5px;
+}
 .center{ 
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.description{
+    font-size: .75em;
 }

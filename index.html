@@ -24,41 +24,127 @@
                 <p class="lead" id="contact"> </p>
             </div>
             <div id="button-row" class="row">
-                <div class="col"><button type="button" class="btn btn-light">Projects</button>
+                <div class="col"><button type="button" onclick="projClick()" class="btn btn-light">Projects</button>
                 </div>
-                <div class="col"><button type="button" class="btn btn-light">Interests</button></div>
+                <div class="col"><button onClick="interestsClick()" type="button"
+                        class="btn btn-light">Interests</button></div>
                 <div class="col"><button onClick="resClick()" type="button" id="res"
                         class="btn btn-light">Resume</button></div>
             </div>
         </div>
         <div id="resume" class="card">
             <div class="card-body">
-                <img class="center" src="./resume.PNG" height="60%">
+                <img class="center" src="./resume.PNG">
             </div>
         </div>
         <div class="card" id="interests">
             <div class="card-body">
-                <p>Biology Chemistry Software Syntetic Biology and how biology will eventually give back to computer
-                    science as computer science has given to biology</p>
+                <p class="lead">My broad interests include Biology, Chemistry, Software, Synthetic Biology and how the
+                    intersection of these areas
+                    will affect Drug Discovery, Development.
+                    <br><br>
+                    I am passionate about combining biology and computer sicence because cells are ultimately nature's
+                    most powerful and robust machines. It is apparent that as computer science has empowered the life
+                    sciences, the life sciences will eventually give back
+                    to computer
+                    science by harnassing billions of years of evolution, for example <a
+                        href="https://www.nature.com/articles/s41576-019-0125-3">using DNA as a medium for
+                        data storage.</a>
+                </p>
             </div>
         </div>
-        <div id="projects">
+        <div id="projects" class="card">
+            <div class="card-body lead">
+                <ul>
+                    <h1 class="lead subheader">Current Projects</h1>
+                    <li class="list-group-item">
 
+                        <b>Software Development at the <a
+                                href="https://medschool.ucsd.edu/som/cmm/research/epigenomics/pages/default.aspx">Center
+                                for Epigenomics</a>:</b>
+                        <p class="description">I am doing full stack development using Django and
+                            JavaScript +
+                            AJAX
+                            + JQuery. I am currently adding functionality to the Django project by making a new app
+                            to
+                            handle single cell experiments.
+                            I have incorporated a new data analysis pipeline into an existing workflow to handle
+                            bulk
+                            single
+                            cell
+                            ATAC sequencing.</p>
+                        <p class="keywords">keywords: Python, Django, Bash scripting, HPC job submisison,
+                            bioinformatics, front end
+                            development</p>
+                    </li>
+                    <li class="list-group-item">
+                        <b>CSE110: Software Engineering:</b><br>
+                        <p class="description">Doing full stack development as my role of system
+                            architect. In a team of 10 building
+                            a
+                            <a href="https://icebreakerideas.com/mafia-game/">Mafia</a> web-app game using Django,
+                            Django RESTFramework, React, websocket and of course, agile methodologies.</p>
+                    </li>
+                    <h1 class='lead subheader' style="margin-top: 25px;">Past Projects</h1>
+                    <li class="list-group-item">
+                        <b>
+                            <a
+                                href="https://github.com/brandonGonzalez01/2018summer_chem_project/blob/master/notebooks/Model%20Optimization.ipynb">
+                                Machine learning chemical solubilites:</a></b>
+                        <p class="description">
+                            Using rdkit to get the fingerprint of a chemical using it's SMILES. A fingerprint of
+                            the chemical extracts its features to an array which can be used in a neural network
+                            for training and predicting. </p>
+                        <p class="keywords">keywords: Python, keras, neural networks, flask, cheminformatics,
+                            sklearn</p>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Gene Pathway Analysis: </b><br>
+                        <p class="description"><a
+                                href="https://github.com/brandonGonzalez01/BIMM143_WI19/blob/master/class_16/GenePathwayAnalysis.md">Using
+                                RNA-seq data to visualize what gene pathways are affected by
+                                a drug treatment.</a></p>
+                        <br>
+                        <p class="keywords">keywords: HOXA1, R, DESeq2, Differential Analysis</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
 <script>
     function resClick() {
         console.log('in resclick');
+        res = document.getElementById('resume');
         if (res.style.display == "block") {
             res.style.display = "none";
         } else {
-            res = document.getElementById('resume');
             turnOffElements();
             res.style.display = "block";
         }
     }
+    function interestsClick() {
+        console.log('in interestsClick');
+        intr = document.getElementById('interests');
 
+        if (intr.style.display == "block") {
+            intr.style.display = "none";
+        } else {
+            turnOffElements();
+            intr.style.display = "block";
+        }
+    }
+    function projClick() {
+        console.log('in projClick');
+        proj = document.getElementById('projects');
+
+        if (proj.style.display == "block") {
+            proj.style.display = "none";
+        } else {
+            turnOffElements();
+            proj.style.display = "block";
+        }
+    }
     function turnOffElements() {
         document.getElementById('resume').style.display = "none";
         document.getElementById('interests').style.display = "none";
