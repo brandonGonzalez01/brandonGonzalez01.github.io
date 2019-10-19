@@ -24,16 +24,16 @@
                 <p class="lead" id="contact"> </p>
             </div>
             <div id="button-row" class="row">
-                <div class="col"><button onClick="resClick()" type="button" class="btn btn-light">Projects</button>
+                <div class="col"><button type="button" class="btn btn-light">Projects</button>
                 </div>
                 <div class="col"><button type="button" class="btn btn-light">Interests</button></div>
-                <div class="col"><button type="button" id="res" class="btn btn-light">Resume</button></div>
+                <div class="col"><button onClick="resClick()" type="button" id="res"
+                        class="btn btn-light">Resume</button></div>
             </div>
         </div>
         <div id="resume" class="card">
             <div class="card-body">
-                <iframe src="./resume.htm" width="100%" height="500px">
-                </iframe>
+                <img class="center" src="./resume.PNG" height="60%">
             </div>
         </div>
         <div class="card" id="interests">
@@ -49,6 +49,7 @@
 </body>
 <script>
     function resClick() {
+        console.log('in resclick');
         if (res.style.display == "block") {
             res.style.display = "none";
         } else {
