@@ -1,0 +1,15 @@
+#content{
+    margin: 0 sauto;
+}
+
+#header-row{
+    text-align: center;
+}
+
+#header{
+    display: inline-block;
+}
+
+#contact{
+    font-size: 1em;
+}
