@@ -30,7 +30,8 @@
 }
 #projects{
     display:none;
-    margin-top: 5px ;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .keywords{
     font-size: .75em;
